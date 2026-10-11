@@ -1,0 +1,160 @@
+/* Author-supplied binaries, isolated family names; no page or shell resets. */
+@font-face {
+  font-family: AtonFelonDial;
+  src: url('./assets/felon/dial-italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: AtonFelonMontserrat;
+  src: url('./assets/felon/felon-montserrat.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.felon-view {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 324 / 324;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 1px 2px #0006);
+}
+.felon-view .felon-instrument {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 324 / 324;
+  overflow: visible;
+}
+.felon-view text {
+  font-family: AtonFelonDial, 'Arial Narrow', Arial, sans-serif !important;
+  font-style: italic !important;
+  font-weight: 400;
+  font-synthesis: none;
+  text-anchor: middle;
+  fill: var(--model-text, #fff);
+  font-variant-numeric: tabular-nums;
+}
+.felon-view .felon-rpm-track { fill: none; stroke: var(--model-text, #fff); stroke-opacity: .345; stroke-width: 2; }
+.felon-view .felon-rpm-redline { fill: none; stroke: var(--model-accent, #ed008b); stroke-width: 3; }
+.felon-view .felon-tick { stroke: var(--model-text, #fff); stroke-opacity: .396; stroke-width: 1.25; }
+.felon-view .felon-tick.felon-major { stroke-opacity: .627; stroke-width: 2; }
+.felon-view .felon-tick.felon-redline { stroke: var(--model-accent, #ed008b); stroke-opacity: 1; }
+.felon-view .felon-rpm-number { fill-opacity: .69; font-size: 13px; dominant-baseline: central; }
+.felon-view .felon-rpm-number.felon-redline { fill: var(--model-accent, #ed008b); fill-opacity: 1; }
+.felon-view .felon-needle { fill: var(--model-text, #fff); }
+.felon-view .felon-gear-ring { fill: transparent; stroke: var(--model-text, #fff); stroke-opacity: .565; stroke-width: 2; }
+.felon-view .felon-gear { font-size: 31px; }
+.felon-view .felon-speed-unit { font-size: 12px; fill-opacity: .737; text-anchor: middle; }
+.felon-view .felon-digital-speed { font-size: 58px; text-anchor: middle; letter-spacing: -1px; }
+.felon-view .felon-trip-inline text{font-family:Rajdhani,Arial,sans-serif!important;font-style:normal!important;font-size:9.5px;letter-spacing:.3px;fill-opacity:.92}
+.felon-view .felon-hazard{fill:#ff3045;fill-opacity:.15;stroke:none}
+.felon-view .felon-hazard.felon-active{fill-opacity:1}
+.felon-view.felon-lamp-test .felon-hazard{fill-opacity:1}
+.felon-view .felon-assist {
+  font-family: AtonFelonMontserrat, Arial, sans-serif !important;
+  font-size: 11px;
+  font-style: normal !important;
+  font-weight: 600;
+  fill-opacity: .22;
+}
+.felon-view .felon-assist.felon-active { fill: #f1c867; fill-opacity: 1; }
+.felon-view .felon-status-icon {
+  fill: none;
+  stroke: var(--model-text, #fff);
+  stroke-opacity: .322;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.felon-view .felon-status-icon.felon-active { stroke: #ecf6ef; stroke-opacity: 1; }
+.felon-view .felon-status-icon.felon-warning { stroke: #ed665f; stroke-opacity: 1; filter: drop-shadow(0 0 2px #f6504040); }
+.felon-view .felon-engine-indicator.felon-warning { stroke: #f1c867; }
+.felon-view .felon-headlight-indicator.felon-highbeam { stroke: #69acff; stroke-opacity: 1; }
+.felon-view .felon-turn-arrow { fill: var(--model-text, #fff); fill-opacity: .271; }
+.felon-view .felon-turn-arrow.felon-active { fill: #ceffe0; fill-opacity: 1; }
+.felon-view .felon-parking-letter { stroke-width: 1.45; }
+.felon-view .felon-secondary-symbols .felon-status-icon { stroke-width: 1.45; }
+.felon-view .felon-fuel-track { stroke: var(--model-text, #fff); stroke-opacity: .22; stroke-width: 2; }
+.felon-view .felon-fuel-progress { stroke: var(--model-text, #fff); stroke-opacity: .78; stroke-width: 2; }
+.felon-view .felon-fuel-value { font-size: 13px; text-anchor: start; fill-opacity: .733; }
+.felon-view.felon-low-fuel .felon-fuel-progress,
+.felon-view.felon-low-fuel .felon-fuel-icon { stroke: #f1c867; stroke-opacity: 1; }
+.felon-view.felon-low-fuel .felon-fuel-value { fill: #f1c867; fill-opacity: 1; }
+.felon-view .felon-not-applicable { opacity: 0; }
+.felon-view .felon-emergency-halo,
+.felon-view .felon-emergency-rim { opacity: 0; }
+.felon-view .felon-emergency-halo path { fill: none; stroke-width: 14; }
+.felon-view .felon-emergency-rim path { fill: none; stroke-width: 2.8; stroke-linecap: round; }
+.felon-view .felon-emergency-left { stroke: #ff3b45; }
+.felon-view .felon-emergency-right { stroke: #258dff; }
+.felon-view.felon-emergency .felon-emergency-halo,
+.felon-view.felon-emergency .felon-emergency-rim { opacity: .95; }
+.felon-view .felon-startup-raster { fill: none; stroke: #efffff; stroke-width: 3.3; stroke-linecap: round; opacity: 0; }
+.felon-view.felon-scanning .felon-startup-raster { opacity: .9; filter: drop-shadow(0 0 3px #a9dfff); }
+.felon-view.felon-lamp-test .felon-status-icon { stroke: #f16b65; stroke-opacity: 1; opacity: 1; }
+.felon-view.felon-lamp-test .felon-engine-indicator,
+.felon-view.felon-lamp-test .felon-fuel-icon { stroke: #edc571; }
+.felon-view.felon-lamp-test .felon-headlight-indicator { stroke: #69acff; }
+.felon-view.felon-lamp-test .felon-turn-arrow { fill: #caffe0; fill-opacity: 1; opacity: 1; }
+.felon-view.felon-lamp-test .felon-assist { fill: #edc571; fill-opacity: 1; }
+.felon-view.felon-lamp-test .felon-not-applicable { opacity: 0; }
+.felon-view.felon-cold-start .felon-gear-ring { stroke-opacity: .816; }
+.felon-view.felon-cold-start .felon-needle { filter: drop-shadow(0 0 3px #b9dfff80); }
+.felon-view.felon-engine-off .felon-rpm-scale,
+.felon-view.felon-engine-off .felon-rpm-track { opacity: .65; }
+
+/* Motion comes only from render(frame.now), never a second CSS/JS timeline. */
+.felon-view.felon-reduced-motion .felon-emergency-halo { display: none; }
+.felon-view.felon-reduced-motion .felon-emergency-rim path { opacity: .8 !important; }
+.felon-view.felon-reduced-motion .felon-startup-raster { opacity: 0; }
+.felon-view.felon-reduced-motion .felon-turn-arrow { opacity: 1 !important; }
+@media (prefers-reduced-motion: reduce) {
+  .felon-view .felon-emergency-halo { display: none; }
+  .felon-view .felon-emergency-rim path { opacity: .8 !important; }
+  .felon-view .felon-startup-raster { opacity: 0; }
+  .felon-view .felon-turn-arrow { opacity: 1 !important; }
+}
+
+/* FELON has no SVG glass group. A bounded coat follows its original dial only. */
+.felon-view {
+  position: relative;
+  --felon-ambient: clamp(0, var(--velo-light-brightness, 1), 1);
+  --felon-reflection: calc(.55 + .45 * var(--felon-ambient));
+  --felon-bloom: .8px;
+}
+.felon-view::after {
+  content: '';
+  position: absolute;
+  left: 11.73%;
+  top: 16.05%;
+  width: 71.6%;
+  height: 71.6%;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 28% 8%, #eaf5ff1a, #cce4f805 44%, transparent 66%),
+    linear-gradient(145deg, #e5f2ff0a, transparent 45%, #0209120d);
+  box-shadow: inset 0 .6px .6px #e7f3ff26, inset 0 -.6px .8px #b0cee40a;
+  opacity: clamp(0, calc(var(--velo-glass-opacity, .35) * var(--felon-reflection)), 1);
+}
+.felon-view:not(.felon-scanning):not(.felon-lamp-test):not(.felon-engine-off) :is(.felon-rpm-scale, .felon-digital-speed, .felon-gear, .felon-needle) {
+  opacity: calc(.55 + .45 * var(--felon-ambient));
+}
+.felon-view .felon-status-icon.felon-warning {
+  filter: drop-shadow(0 0 var(--felon-bloom) #f6504040);
+}
+.felon-view.felon-emergency .felon-emergency-halo {
+  opacity: calc(.28 * var(--felon-ambient));
+}
+body[data-velo-quality="high"] .felon-view { --felon-bloom: 1.2px; }
+body[data-velo-quality="high"] .felon-view.felon-emergency .felon-emergency-halo { opacity: calc(.36 * var(--felon-ambient)); }
+body[data-velo-quality="low"] .felon-view { --felon-bloom: 0px; }
+body[data-velo-quality="low"] .felon-view .felon-emergency-halo { display: none; }
+body[data-velo-quality="low"] .felon-view :is(.felon-status-icon, .felon-startup-raster, .felon-needle) { filter: none; }
+.felon-view.felon-reduced-motion .felon-emergency-halo { display: none; }

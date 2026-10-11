@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "models": [
+    "aton",
+    "truck",
+    "felon"
+  ],
+  "browserErrors": [],
+  "failedRequests": []
+}
