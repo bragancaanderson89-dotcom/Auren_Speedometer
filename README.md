@@ -1,4 +1,4 @@
-# Apex_Speedometer 4.0.0
+# Auren_Speedometer 4.0.0
 
 ---
 
@@ -14,15 +14,15 @@
 
 ---
 
-# Apex_Speedometer 4.0.0
+# Auren_Speedometer 4.0.0
 
-Recurso único para FiveM com três painéis (APEX, ZSX e Caminhão), editor `/editvelo`, shift lights e prévia `DEV.html`. Suporta Qbox, QB-Core e modo standalone. O pacote deve ser instalado com o nome de pasta **`Apex_Speedometer`**.
+Recurso único para FiveM com três painéis (Aton, Felon e Caminhão), editor `/editvelo`, shift lights e prévia `DEV.html`. Suporta Qbox, QB-Core e modo standalone. O pacote deve ser instalado com o nome de pasta **`Apex_Speedometer`**.
 
 ## Instalação
 
-1. Copie a pasta `Apex_Speedometer` para `resources` do servidor.
+1. Copie a pasta `Auren_Speedometer` para `resources` do servidor.
 2. No `server.cfg`, inicie seu framework e recurso de combustível primeiro; depois adicione `ensure Apex_Speedometer`.
-3. Remova as linhas antigas `ensure velo_core`, `ensure apex_speedometer` e `ensure zsx_speedometer` para não exibir painéis duplicados.
+3. Remova as linhas antigas `ensure velo_core`, `ensure Auren_speedometer` e `ensure Auren_speedometer` para não exibir painéis duplicados.
 4. Abra `config.lua` para ajustar framework, unidades, combustível, cinto, perfis de veículos e comandos. O modo `Framework = 'auto'` detecta Qbox/QB-Core e usa standalone quando nenhum deles está ativo.
 
 Os três layouts já vêm dentro de `speedometers/`. O `fxmanifest.lua` publica os arquivos da NUI, e o `client/models.lua` registra os três modelos. Não há dependência entre recursos de velocímetro. O editor permite alternar o modelo ativo e ajustar painel, componentes, vidro, cores, shift lights e viagem. `/apexhud` alterna a exibição; `/velodiag` imprime fontes e disponibilidade da telemetria no F8.
